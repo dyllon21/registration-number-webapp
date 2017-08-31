@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/dyllon21/registration_numbers_webapp#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9"
   },
   "devDependencies": {
     "body-parser": "^1.17.2",
+    "express-flash": "0.0.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.5",
     "handlebars": "^4.0.10",
