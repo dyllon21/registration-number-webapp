@@ -1,8 +1,8 @@
 module.exports = function(models) {
   'use strict';
 
-  var regData = "";
-  var regList = [];
+  // var regData = "";
+  // var regList = [];
 
   const index = function(req, res, next) {
 
@@ -33,53 +33,70 @@ module.exports = function(models) {
     // });
 
     if (!regNumber || !regNumber.name) {
-      req.flash('error', 'Registrations should not be blank')
+      req.flash('error', 'Registrations field should not be blank')
       res.redirect('/regNumbers');
       // regList.push(regNumber);
     } else {
       models.Registrations.create(regNumber, function(err, results) {
         if (err) {
           if (err.code === 11000) {
-            req.flash('error', 'regNumber already exists')
+            req.flash('error', 'Registration Number already exists')
           } else {
             return next(err);
           }
         } else {
-          req.flash('success', 'regPlate added!');
+          req.flash('success', 'Registration Number Added!');
         }
         res.redirect('/regNumbers');
       });
     }
   }
+
+  function filterPlt(regNumbers, regNrStart) {
+    // console.log(regNumbers);
+    var filterList = regNumbers.filter(function(regNumber) {
+      var uppercaseRegNr = regNumber.name.toUpperCase();
+      return uppercaseRegNr.startsWith(regNrStart);
+    })
+
+    // var filterList = [];
+    // // function takes in an array(regList) of all the plates entered...
+    // for (let i = 0; i < regNumbers.length; i++) {
+    //   let regNumber = regNumbers[i];
+    //
+    //   //console.log(regNumber);
+    //
+    //   if (regNumber.name.toUpperCase().startsWith(regNrStart)) {
+    //     filterList.push(regNumber);
+    //   }
+    //
+    // }
+    // console.log(filterList);
+    return filterList
+  }
+
   const filter = function(req, res) {
 
-    var radioButton = req.body.regTown;
-    var showButton = req.body.showButton;
+    //var showButton = req.body.showButton;
+    var selectedTownRegNr = req.body.regTown;
 
-    Registrations.find({})
-      .then((arr) => {
+    models.Registrations.find({})
+      .then((regNumberList) => {
 
-        // function takes in an array(regList) of all the plates entered...
-        function filterPlt(arr) {
-          var filterList = [];
-          for (let i = 0; i < arr.length; i++) {
-            let currentRegNumber = arr[i];
-            if (radioButton === 'cape town' && currentRegNumber.startsWith('CA')) {
-              filterList.push(arr[i]);
-            } else if (radioButton === 'bellville' && currentRegNumber.startsWith('CY')) {
-              filterList.push(arr[i]);
-            } else if (radioButton === 'malmesbury' && currentRegNumber.startsWith('CK')) {
-              filterList.push(arr[i]);
-            } else if (radioButton === 'all') {
-              filterList.push(arr[i]);
-            };
-          }
-          return filterList
+        //filterPlt(regNumberList, selectedTownRegNr)
+        var regNumbers = regNumberList;
+
+        if (selectedTownRegNr !== "ALL") {
+          regNumbers = filterPlt(regNumberList, selectedTownRegNr)
         }
 
         res.render("regNumbers", {
-          regNumbers: filterPlt(regList)
+          regNumbers: regNumbers
         });
+
+      })
+      .catch(function(err) {
+        console.log(err.stack);
       });
   }
 

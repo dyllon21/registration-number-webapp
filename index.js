@@ -6,14 +6,13 @@ var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('express-flash');
-
-var RegNumberRoutes = require('./regNumbers');
 var Models = require('./models');
 
-var Registrations = Models('mongodb://localhost/towns');
-var regNumberRoutes = RegNumberRoutes(Registrations);
+var RegNumberRoutes = require('./regNumbers');
+
+var models = Models('mongodb://localhost/towns');
+var regNumberRoutes = RegNumberRoutes(models);
 const mongoURL = process.env.MONGO_DB_URL || "mongodb://localhost/towns";
-const models = Models(mongoURL);
 
 app.use(express.static('public'));
 app.use(express.static('views'));
@@ -30,6 +29,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+var format = require('util').format;
 
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
@@ -54,5 +54,5 @@ app.post('/regNumbers/add', regNumberRoutes.add);
 const port = process.env.PORT || 3001;
 
 app.listen(port, function() {
-  console.log('registration numbers app started on port : ' + port);
+  console.log('registration number app started on port : ' + port);
 });

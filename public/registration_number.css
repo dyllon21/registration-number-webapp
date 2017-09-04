@@ -58,7 +58,7 @@ div.container {
 .addBtn:hover {
   background-color: #39698A;
   color: #FfFfFf;
-  border: 2px solid #39698A;
+  border: 0px solid #39698A;
   cursor: pointer;
   -webkit-transition: 50ms ease-in-out;
   -moz-transition: 50ms ease-in-out;

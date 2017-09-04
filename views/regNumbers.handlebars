@@ -22,16 +22,16 @@
 <form class='' action='/regNumbers' method='post'>
   <div class='container'>
     <label class='radios'>
-    <input type='radio' name='regTown' value='malmesbury'>MALMESBURY
+    <input type='radio' name='regTown' value='CK'>MALMESBURY
   </label>
     <label class='radios'>
-    <input type='radio' name='regTown' value='bellville'>BELLVILLE
+    <input type='radio' name='regTown' value='CY'>BELLVILLE
   </label>
     <label class='radios'>
-    <input type='radio' name='regTown' value='cape town'>CAPE TOWN
+    <input type='radio' name='regTown' value='CA'>CAPE TOWN
   </label>
     <label class='radios'>
-  <input type="radio" name="regTown" value="all"> ALL
+  <input type="radio" name="regTown" value="ALL"> ALL
 </label>
 <div class='showButton'>
 <input type="submit" name="" value="show">
@@ -42,7 +42,7 @@
 <ul>
   <div class='regNum'>
     {{#each regNumbers}}
-      <ul class="regPlates">{{name}}</ul>
+      <li class="regPlates">{{name}}</li>
     {{/each}}
   </div>
 </ul>

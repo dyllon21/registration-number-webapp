@@ -276,7 +276,7 @@ textarea {
  */
 
 button:hover {
-  
+width : auto;
 }
 
 /**
@@ -289,7 +289,7 @@ button:hover {
 button,
 select {
   text-transform:capitalize;
-  border-radius: 35em;
+  border-radius: 20em;
 }
 
 /**
