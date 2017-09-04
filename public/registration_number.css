@@ -19,7 +19,7 @@
 }
 div.header {
   padding: 1em;
-  color: white;
+  color: #000;
   background-color: black;
   text-align: center;
   font-family: sans-serif;
@@ -41,6 +41,21 @@ div.container {
 }
 
 .showButton:hover {
+  background-color: #39698A;
+  color: #FfFfFf;
+  border: 2px solid #39698A;
+  cursor: pointer;
+  -webkit-transition: 50ms ease-in-out;
+  -moz-transition: 50ms ease-in-out;
+  transition: 50ms ease-in-out;
+}
+.addBtn {
+  border-radius: 20em;
+  color: #39698A;
+  font-family: sans-serif;
+}
+
+.addBtn:hover {
   background-color: #39698A;
   color: #FfFfFf;
   border: 2px solid #39698A;

@@ -10,10 +10,10 @@ var flash = require('express-flash');
 var RegNumberRoutes = require('./regNumbers');
 var Models = require('./models');
 
-var models = Models('mongodb://localhost/towns');
+var Registrations = Models('mongodb://localhost/towns');
 var regNumberRoutes = RegNumberRoutes(Registrations);
-
 const mongoURL = process.env.MONGO_DB_URL || "mongodb://localhost/towns";
+const models = Models(mongoURL);
 
 app.use(express.static('public'));
 app.use(express.static('views'));
