@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/dyllon21/registration_numbers_webapp.git"
   },
+  "engines": {
+    "node": "4.2.6"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +21,7 @@
   "homepage": "https://github.com/dyllon21/registration_numbers_webapp#readme",
   "dependencies": {
     "express": "^4.15.4",
+    "mongodb": "^2.2.31",
     "mongoose": "^4.11.9"
   },
   "devDependencies": {

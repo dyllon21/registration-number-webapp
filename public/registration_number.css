@@ -1,31 +1,48 @@
 .regPlates {
-    width: 30%;
-    border-radius: 40px;
-    border-style: solid;
-    border-width: 10px;
-    height: 30px;
-    margin: auto;
-    clear : none;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-top: 20px;
-    font-size: 13px;
-    font-display: center;
-    font-family: sans-serif;
-    background-color: yellow;
-    font-weight: bold;
-    text-transform: uppercase;
+  width: 20.5%;
+  border-top-left-radius: 5.5%;
+  border-bottom-right-radius: 5.5%;
+  border-top-right-radius: 5.5%;
+  border-bottom-left-radius: 5.5%;
+  border-style: solid;
+  border-width: 10px;
+  height: 30px;
+  margin: auto;
+  clear: none;
+  text-align: center;
+  text-decoration: inherit;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  font-size: 13.5px;
+  font-display: center;
+  font-family: sans-serif;
+  background-color: yellow;
+  text-transform: uppercase;
+  display: inherit;
+  padding: 1.5em;
 }
-div.header {
+
+div.header1 {
   padding: 1em;
-  color: #000;
+  color: #fff;
   background-color: black;
   text-align: center;
   font-family: sans-serif;
-  font-size-adjust: auto;
+  font-size-adjust: cover;
   border-spacing: 12em;
 }
+
+div.header {
+  padding: 1em;
+  color: #fff;
+  background-color: black;
+  text-align: center;
+  font-family: sans-serif;
+  font-size-adjust: cover;
+  border-spacing: 12em;
+}
+
 div.container {
   padding: 1em;
   color: white;
@@ -34,8 +51,9 @@ div.container {
   font-family: sans-serif;
   font-size-adjust: auto;
 }
+
 .showButton {
-  border-radius: 20em;
+  border-radius: 20px;
   color: #39698A;
   font-family: sans-serif;
 }
@@ -49,6 +67,7 @@ div.container {
   -moz-transition: 50ms ease-in-out;
   transition: 50ms ease-in-out;
 }
+
 .addBtn {
   border-radius: 20em;
   color: #39698A;
@@ -63,4 +82,8 @@ div.container {
   -webkit-transition: 50ms ease-in-out;
   -moz-transition: 50ms ease-in-out;
   transition: 50ms ease-in-out;
+}
+
+div.flash {
+  color: green;
 }
