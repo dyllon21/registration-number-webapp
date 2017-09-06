@@ -1,0 +1,42 @@
+{
+  "name": "registration_numbers_webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyllon21/registration_numbers_webapp.git"
+  },
+  "engines": {
+    "node": "4.2.6"
+  },
+  "author": "dyllon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyllon21/registration_numbers_webapp/issues"
+  },
+  "homepage": "https://github.com/dyllon21/registration_numbers_webapp#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.9"
+  },
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.5",
+    "handlebars": "^4.0.10",
+    "nodemon": "^1.11.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "heroku"
+  ]
+}
