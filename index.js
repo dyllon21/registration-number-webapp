@@ -10,9 +10,9 @@ var Models = require('./models');
 
 var RegNumberRoutes = require('./regNumbers');
 
-var models = Models('mongodb://localhost/towns');
-var regNumberRoutes = RegNumberRoutes(models);
 const mongoURL = process.env.MONGO_DB_URL || "mongodb://localhost/towns";
+var models = Models(mongoURL);
+var regNumberRoutes = RegNumberRoutes(models);
 
 app.use(express.static('public'));
 app.use(express.static('views'));
