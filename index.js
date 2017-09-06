@@ -51,8 +51,8 @@ app.post('/regNumbers/add', regNumberRoutes.add);
 
 
 //start the server
-const port = process.env.PORT || 5000;
+app.set('port', (process.env.PORT || 5000));
 
-app.listen(port, function() {
-  console.log('registration number app started on port : ' + port);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
