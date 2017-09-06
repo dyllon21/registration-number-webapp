@@ -35,7 +35,7 @@ div.header1 {
 
 div.header {
   padding: 1em;
-  color: #fff;
+  color: #000;
   background-color: black;
   text-align: center;
   font-family: sans-serif;
@@ -53,7 +53,6 @@ div.container {
 }
 
 .showButton {
-  border-radius: 20px;
   color: #39698A;
   font-family: sans-serif;
 }
@@ -61,7 +60,7 @@ div.container {
 .showButton:hover {
   background-color: #39698A;
   color: #FfFfFf;
-  border: 2px solid #39698A;
+  border: solid #39698A;
   cursor: pointer;
   -webkit-transition: 50ms ease-in-out;
   -moz-transition: 50ms ease-in-out;
@@ -69,7 +68,6 @@ div.container {
 }
 
 .addBtn {
-  border-radius: 20em;
   color: #39698A;
   font-family: sans-serif;
 }
@@ -82,8 +80,16 @@ div.container {
   -webkit-transition: 50ms ease-in-out;
   -moz-transition: 50ms ease-in-out;
   transition: 50ms ease-in-out;
+  outline: none;
 }
 
 div.flash {
   color: green;
+}
+input{
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-style: solid;
+
 }

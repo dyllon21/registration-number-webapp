@@ -6,11 +6,11 @@
  *    user zoom.
  */
 
-/*html {
+html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-}*/
+}
 
 /**
  * Remove default margin.
@@ -265,7 +265,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: #000; /* 1 */
+  color: #000fff; /* 1 */
   font: monospace; /* 2 */
   margin: 0 auto; /* 3 */
   border-radius: 3em;
@@ -277,7 +277,7 @@ textarea {
  */
 
 button:hover {
-width : auto;
+max-width : 5em;
 }
 
 /**
@@ -290,7 +290,7 @@ width : auto;
 button,
 select {
   text-transform:capitalize;
-  border-radius: 20em;
+  border-radius: 2em;
 }
 
 /**
@@ -308,7 +308,7 @@ input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer;  /* 3 */
   align-content: center;
-  border-radius: 25em;
+  border-radius: 5em;
 }
 
 /**
@@ -351,7 +351,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  color: #fff;
+  color: #fff000;
   align-items: center;
 }
 
@@ -417,6 +417,7 @@ legend {
 textarea {
   overflow: auto;
   border-radius: 25em;
+  color:inherit;
 }
 
 /**
