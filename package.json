@@ -37,7 +37,4 @@
   "directories": {
     "test": "test"
   },
-  "keywords": {
-    "heroku"
-  },
   }
