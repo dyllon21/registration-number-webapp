@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,6 @@
   "engines": {
     "node": "4.2.6"
   },
-  "author": "dyllon",
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -24,17 +23,17 @@
   "dependencies": {
     "express": "^4.15.4",
     "mongodb": "^2.2.31",
-    "mongoose": "^4.11.9"
-  },
-  "devDependencies": {
+    "mongoose": "^4.11.9",
     "body-parser": "^1.17.2",
     "express-flash": "0.0.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.5",
-    "handlebars": "^4.0.10",
+    "handlebars": "^4.0.10"
+  },
+  "devDependencies": {
     "nodemon": "^1.11.0"
   },
   "directories": {
     "test": "test"
-  },
   }
+}
