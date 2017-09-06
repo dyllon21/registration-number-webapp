@@ -23,7 +23,7 @@
   padding: 1.5em;
 }
 
-div.header1 {
+.header1 {
   padding: 1em;
   color: #fff;
   background-color: black;
@@ -33,7 +33,7 @@ div.header1 {
   border-spacing: 12em;
 }
 
-div.header {
+.header {
   padding: 1em;
   color: #000;
   background-color: black;
@@ -43,7 +43,7 @@ div.header {
   border-spacing: 12em;
 }
 
-div.container {
+.container {
   padding: 1em;
   color: white;
   background-color: black;
@@ -83,7 +83,7 @@ div.container {
   outline: none;
 }
 
-div.flash {
+.flash {
   color: green;
 }
 input{
@@ -91,5 +91,13 @@ input{
   padding-bottom: 5px;
   padding-top: 5px;
   border-style: solid;
-
+}
+.header3 {
+  padding: 1em;
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-family: sans-serif;
+  font-size-adjust: cover;
+  border-spacing: 12em;
 }
