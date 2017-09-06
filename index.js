@@ -29,13 +29,13 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-var format = require('util').format;
 
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
+var format = require('util').format;
 // create a route
 app.get('/reg_number/:id', function(req, res) {
   console.log(req.params.id);
