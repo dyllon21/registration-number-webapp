@@ -1,6 +1,5 @@
 module.exports = function(models) {
   'use strict';
-
   const index = function(req, res, next) {
 
     models.Registrations.find({}, function(err, regNumbers) {
