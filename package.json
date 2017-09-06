@@ -15,6 +15,7 @@
     "node": "4.2.6"
   },
   "author": "dyllon",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dyllon21/registration_numbers_webapp/issues"
@@ -39,4 +40,5 @@
   "keywords": [
     "heroku"
   ]
+  }
 }
