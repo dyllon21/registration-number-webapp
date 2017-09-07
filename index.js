@@ -42,8 +42,7 @@ app.get('/reg_number/:id', function(req, res) {
   res.send(req.params.id);
 });
 
-app.get('/regNumbers', regNumberRoutes.index);
-app.get('/regNumbers/add', regNumberRoutes.addScreen);
+app.get('/regNumbers/add', regNumberRoutes.index);
 app.get('/regNumbers', regNumberRoutes.filter)
 app.post('/regNumbers', regNumberRoutes.filter)
 app.post('/regNumbers/add', regNumberRoutes.add);

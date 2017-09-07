@@ -2,22 +2,29 @@
 <div class='header1' align='center'>
 <h1>Registration Number Web App</h1>
 
-<a href='/regNumbers/add'><b> Add a Registration Number</b></a>
 </div>
-<br>
 <div class='flash'>
-{{#if messages.error}}
+  {{#if messages.error}}
   <div class='error'>
     <h2>{{messages.error}}</h2>
   </div>
-{{/if}}
-{{#if messages.success}}
+  {{/if}}
+  {{#if messages.success}}
   <div class='success'>
     <h2>{{messages.success}}</h2>
   </div>
-{{/if}}
+  {{/if}}
 </div>
-
+<form class='' action='/regNumbers/add' method='post'>
+  <div class='header'text-align='center'>
+  <input type='text' name='regNumber' placeholder ="type regNumber here"</input>
+  <br>
+<br>
+  <div class='addBtn'>
+<input type='submit' name='' value='Add'></form>
+</div>
+</div>
+<hr>
 <form class='' action='/regNumbers' method='post'>
   <div class='container'>
     <label class='radios'>

@@ -12,10 +12,6 @@ module.exports = function(models) {
     });
   };
 
-  const addScreen = function(req, res) {
-    res.render('add');
-  }
-
   const add = function(req, res, next) {
 
     var regNumber = {
@@ -91,7 +87,6 @@ module.exports = function(models) {
 
   return {
     index,
-    addScreen,
     add,
     filter
   }
