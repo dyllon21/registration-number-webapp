@@ -1,7 +1,7 @@
 {
   "name": "registration_numbers_webapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "filter out regPlates for individual town",
   "main": "index.js",
   "scripts": {
     "test": "mocha",

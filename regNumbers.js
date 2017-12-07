@@ -70,6 +70,8 @@ module.exports = function(models) {
 
         if (selectedTownRegNr !== "ALL") {
           regNumbers = filterPlt(regNumberList, selectedTownRegNr)
+        }else if (selectedTownRegNr !== 'CK', 'CY', 'CA'){
+          
         }
 
         res.render("regNumbers", {

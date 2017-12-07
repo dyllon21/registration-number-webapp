@@ -1,27 +1,28 @@
 <html>
 <div class='header1' align='center'>
-<h1>Registration Number Web App</h1>
+  <h1>Registration Number Web App</h1>
 
 </div>
 <div class='flash'>
   {{#if messages.error}}
-  <div class='error'>
-    <h2>{{messages.error}}</h2>
-  </div>
+    <div class='error'>
+      <h2>{{messages.error}}</h2>
+    </div>
   {{/if}}
   {{#if messages.success}}
-  <div class='success'>
-    <h2>{{messages.success}}</h2>
-  </div>
+    <div class='success'>
+      <h2>{{messages.success}}</h2>
+    </div>
   {{/if}}
+
 </div>
 <form class='' action='/regNumbers/add' method='post'>
-  <div class='header'text-align='center'>
-  <input type='text' name='regNumber' placeholder ="type regNumber here"</input>
-  <br>
-<br>
-  <div class='addBtn'>
-<input type='submit' name='' value='Add'></form>
+  <div class='header' text-align='center'>
+    <input type='text' name='regNumber' placeholder="type regNumber here" </input>
+    <br>
+    <br>
+    <div class='addBtn'>
+      <input type='submit' name='' value='Add'></form>
 </div>
 </div>
 <hr>
@@ -39,8 +40,8 @@
     <label class='radios'>
   <input type="radio" name="regTown" value="ALL">ALL
 </label>
-<div class='showButton'>
-  <input type="submit" name="" value="show">
+    <div class='showButton'>
+      <input type="submit" name="" value="show">
 </form>
 </div>
 </div>
@@ -48,7 +49,7 @@
 <ul>
   <div class='regNum'>
     {{#each regNumbers}}
-      <ul class="regPlates">{{name}}</ul>
+      <ul class="regPlates"><b>{{name}}</b></ul>
     {{/each}}
   </div>
 </ul>
